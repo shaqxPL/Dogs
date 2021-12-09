@@ -13,5 +13,16 @@ public class Main {
         Dog pies4 = new Dog("pinczer");
         System.out.println(pies4);
 
+
+
+        Car first = new Car("ford","black",4.0);
+        System.out.println(first);
+
+        first.move();
+
+
+
+
+
     }
 }
