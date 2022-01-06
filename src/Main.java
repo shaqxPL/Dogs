@@ -1,27 +1,16 @@
 public class Main {
 
     public static void main (String[] args) {
-       Dog pies1 = new Dog();
-        System.out.println(pies1);
 
-        Dog pies2 = new Dog();
-        System.out.println(pies2);
+        User firstUser = new User();
+        System.out.println(firstUser);
 
-        Dog pies3 = new Dog("azor", "kundel", 3);
-        System.out.println(pies3);
+        User secondUser = new User("John", "pass123", "user@gm.com", 30);
+        System.out.println(secondUser);
 
-        Dog pies4 = new Dog("pinczer");
-        System.out.println(pies4);
-
-
-
-        Car first = new Car("ford","black",4.0);
-        System.out.println(first);
-
-        first.move();
-
-
-
+        UserService userService = new UserService();
+        User user = userService.getUserByLogin("Robert");
+        System.out.println("znalazlem user'a: " + user.login + " " + user.age);
 
 
     }
