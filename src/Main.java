@@ -1,16 +1,13 @@
+import java.util.Scanner;
+
 public class Main {
-
     public static void main (String[] args) {
+        Scanner userInput = new Scanner(System.in);
+        int a = userInput.nextInt();
+        int b = userInput.nextInt();
+        int sum = a + b;
+        System.out.println("wynik dodawania to " + sum);
 
-        User firstUser = new User();
-        System.out.println(firstUser);
-
-        User secondUser = new User("John", "pass123", "user@gm.com", 30);
-        System.out.println(secondUser);
-
-        UserService userService = new UserService();
-        User user = userService.getUserByLogin("Robert");
-        System.out.println("znalazlem user'a: " + user.login + " " + user.age);
 
 
     }
