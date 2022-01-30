@@ -5,27 +5,21 @@ public class Main {
     public static void main (String[] args) {
 
         Scanner userInput = new Scanner(System.in);
-        // ln w tej samej linii
-        System.out.print("Input first number: ");
-        int a = userInput.nextInt();
-        // ln linia ponizej
-        System.out.println("Input second number: ");
-        int b = userInput.nextInt();
+        System.out.println("Program przeliczania minut na dni i lat");
+        System.out.println("Wpisz ilość minut:");
 
-        System.out.println(a + " + " + b + " = " + (a+b));
+        int minutes = userInput.nextInt();
 
-        int subtract = a - b;
-        System.out.println(a + " - " + b + " = " + subtract);
+        int day = 1440;
+        double year = 525948.76;
 
-        System.out.println(a + " x " + b + " = " + (a*b));
+        double days = minutes/day;
+        double minutesInYear = minutes/year;
+        double daysInYear =days/365;
 
-        int divide = a / b;
-        System.out.println(a + " / " + b + " = " + divide);
-
-        int modulo = a % b;
-        System.out.println(a + " mod " + b + " = " + modulo);
-
-
-
+        System.out.println(minutes + " minut to: " + days + " dni/dnia.");
+        System.out.println(minutes + " minut to: " +  minutesInYear + " lat/roku");
+        System.out.println("BONUS: z podanych minut otrzymujemy: " + days + " dni których jest " + daysInYear + " w roku.");
+        System.out.println("Dziękuje.");
     }
 }
